@@ -11,11 +11,25 @@ public class DemoMain {
 
         printOutList printer = new printOutList();
         insertionSort is = new insertionSort();
+        insertionSort_1 is1 = new insertionSort_1();
+
+        ReverseInsertionSort ris = new ReverseInsertionSort();
 
 
-        System.out.println(printer.printOut(is.insertSorting(setup.arr1)));
-        System.out.println(printer.printOut(is.insertSorting(setup.arr2)));
-        System.out.println(printer.printOut(is.insertSorting(setup.arr3)));
+
+
+//        System.out.println(printer.printOut(is.insertSorting(setup.arr1)));
+//        System.out.println(printer.printOut(is.insertSorting(setup.arr2)));
+//        System.out.println(printer.printOut(is.insertSorting(setup.arr3)));
+
+
+//        System.out.println(printer.printOut(is1.insertSorting(setup.arr1)));
+//        System.out.println(printer.printOut(is1.insertSorting(setup.arr2)));
+//        System.out.println(printer.printOut(is1.insertSorting(setup.arr3)));
+
+        System.out.println(printer.printOut(ris.reversingInsertSorting(setup.arr1)));
+        System.out.println(printer.printOut(ris.reversingInsertSorting(setup.arr2)));
+        System.out.println(printer.printOut(ris.reversingInsertSorting(setup.arr3)));
 
 
     }
