@@ -56,7 +56,7 @@ Insertion Sort Proof:
         key = A[j]                                                   # 2
         // Insert A[j] into the sorted sequence A[1 ... j -1]        # 3
         i = j-1                                                      # 4
-        while i > 0 and A[i] > key                                   # 5
+        while i >= 0 and A[i] > key                                   # 5
             A[i + 1] = A[i]                                          # 6
             i = i - 1                                                # 7
         A[i + 1] = key                                               # 8
