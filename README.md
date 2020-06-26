@@ -46,7 +46,7 @@ Termination: When the loop terminates, the invariant gives us a useful property 
 ============================================================
 
 6.24 
-Goal: Chapter 2
+Goal: Chapter 2.1 
 
 Insertion Sort Proof:
 
@@ -102,4 +102,69 @@ Question 2.1 - 2 Rewrite the InsertionSort procedure to sort into nonincreasing 
         while i >= 0 and A[i] < key                                   # 5
             A[i + 1] = A[i]                                          # 6
             i = i - 1                                                # 7
-        A[i + 1] = key     
+        A[i + 1] = key    
+        
+  Question 2.1 - 3 Consider the searching problem \
+  Input: A sequence of n numbers A = <a_1, a_2, ..., a_n> and a value v\
+  Output: An index i such that v = A[i] or the special value NIL if v does not appear in A \  
+  Write the psudocode for linear search \
+  
+    for j = 0 to A.length
+        if A[j] == v:
+            return j;
+    return NIl;
+  
+  Loop invariant: At a start of each iteration of the for loop, the subarray A[1,... j-1] consists of the elements != v. \
+  Initialization: 
+  We start by showing that the loop invariants holds before the 
+  first loop iteration, when j=0. The subarray is empty, 
+  therefore, consists of no elements == v, which shows that the loop 
+  invariant holds prior to the first iteration of the loop.
+  
+  Maintenance: Next, we tackle the second property: showing that 
+  each iteration maintains the loop invariant. Informally, the 
+  body of the for loop works by moving A[0], ..., A[j - 1], 
+  A[j -2], and so on by one position to the right until it 
+  finds the proper position for A[j]. If not it continuous.        
+  
+  Termination: The condition causing the for loop to terminate is that j > A.length = n. If it reaches to the end then return NIL
+  
+Question 2.1 - 4 Consider the problem of adding two n-bit binary integers, sorted in two n-element arrays A and B.
+    The sum of the two integers should be stored in binary form in an (n + 1)-element array C. State the problem formally and write pseudocode
+    for adding two integers. (Look at LeetCode 002 )\
+    
+    
+========================================================
+
+Chapter 2.2 （Please refer to CSC165 Course Note)
+
+=======================================================
+
+Chapter 2.3 Designing algorithms \
+
+` Definition`\
+Incremental approach: Haveing sorted the subarray A[1...j-1], we inserted the single element A[j] 
+into its proper place, yielding the sorted subarray A[1...j]. \
+
+2.3.1 The divide-and-conquer approach \
+
+`Definitions`
+
+Recursive: To solve a given problem, an algorithm can call itself recursively one or more times to deal with closely related subproblems. \
+
+Divide-and-conquer approach: break the problem into several subproblems that
+are similar to the original problem but smaller in size, solve the subproblems
+recursively, and then combine the solution to the original problem. 
+
+`Proof of Merge Sort` (Please refer to the class Chapter2_gettingStart.MergeSort)
+
+Initialization: Prior to the first iteration of the loop, we have k = p, so that the subarray A[p..k-1] is empty.
+This empty subarray contains the k-p=0 smallest elements of L and R, and since i = j = 1, both
+L[i] and R[j] are the smallest elements of their arrays that have not been copied back into A. 
+
+Maintenance: 
+Termination: ...
+
+
+
+    
