@@ -165,6 +165,43 @@ L[i] and R[j] are the smallest elements of their arrays that have not been copie
 Maintenance: 
 Termination: ...
 
+`Analysis of Merge Sort`
+
+Divide: The divide step just computes the middle of the array, which takes constant time. Thus, D(n) = $\theta (1)$
+
+Conquer: We recursively solve two subproblems, each of size n/2, which contributes 2T(n/2) to the running time. 
+
+Combine: We have already noted that the merge procedure on an n-element subarray takes time $\theta (n)$, so C(n) = \theta (n). 
+
+Hence, \
+T(n) = \theta(1) when n = 1 \
+T(n) = 2T(n/2) + \theta(n) when n > 1   #Proof by induction
+
+`Exercise`
+
+2.3.1 Using Figure 2.4 as a model, illustrate the operation of merge sort on the array A=<3, 41, 52, 26, 38, 57, 9, 49>. 
+
+A=<3, 41, 52, 26, 38, 57, 9, 49> \
+--> <3, 41, 52, 26> + <38, 57, 9, 49> \
+--> <3, 41> + <52, 26> || <38, 57> + <9, 49> \
+--> <3> + <41> || < 52> + <26> || <38> + <57> || <9> + <49> \
+--> <3, 41> || <26, 52> || <38, 57> || <9, 49>  \
+--> <3, 26, 41, 52> || <9, 38, 49, 57>  \
+--> <3, 9, 26, 38, 41, 49, 52, 57> 
+
+The worst-case running time of binary search is \theta lgn
+
+`2-1 Insertion sort on small arrays in merge sort`
+
+Although merge sort runs in \theta(nlgn) worst-case time and insertion sort runs in \theta(n^2) 
+worst case time, the constant factors in insertion sort can make it faster in practice 
+for small small problem sizes on many machines. Thus, it makes sense to coarsen 
+the leaves of the recursion by using insertion sort within merge sort when subproblems 
+become sufficiently small. Consider a modification to merge sort in which n/k sublists of length k are 
+sorted using insertion sort and then merged using the standard merging mechansim, where k is a value to be determined. 
+
+a. Show that insertion sort can sort the n/k sublists, each of length k, in \theta (nk) worst-case time. 
+
 
 
     
