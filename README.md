@@ -202,6 +202,12 @@ sorted using insertion sort and then merged using the standard merging mechansim
 
 a. Show that insertion sort can sort the n/k sublists, each of length k, in \theta (nk) worst-case time. 
 
+### 4 Divide and Conquer<br /> 
+
+**Topic one: maximum subarray problem** <br /> 
+
+
+
 
 
     
