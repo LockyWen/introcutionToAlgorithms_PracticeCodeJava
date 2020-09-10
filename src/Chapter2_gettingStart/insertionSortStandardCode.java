@@ -2,10 +2,10 @@ package Chapter2_gettingStart;
 
 import java.util.ArrayList;
 
-public class insertionSort_1 {
+public class insertionSortStandardCode {
     Integer key;
     int i;
-    insertionSort_1(){}
+    insertionSortStandardCode(){}
 
     public ArrayList<Integer> insertSorting(ArrayList<Integer> unsortList){
         for(int j = 0; j < unsortList.size(); j++){

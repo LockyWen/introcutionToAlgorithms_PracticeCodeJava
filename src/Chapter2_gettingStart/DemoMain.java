@@ -11,7 +11,8 @@ public class DemoMain {
 
         printOutList printer = new printOutList();
         insertionSort is = new insertionSort();
-        insertionSort_1 is1 = new insertionSort_1();
+        insertionSortStandardCode is1 = new insertionSortStandardCode();
+        Solution solution1 = new Solution();
 
         ReverseInsertionSort ris = new ReverseInsertionSort();
         MergeSort ms = new MergeSort();
@@ -28,13 +29,17 @@ public class DemoMain {
 //        System.out.println(printer.printOut(is1.insertSorting(setup.arr2)));
 //        System.out.println(printer.printOut(is1.insertSorting(setup.arr3)));
 
-//        System.out.println(printer.printOut(ris.reversingInsertSorting(setup.arr1)));
-//        System.out.println(printer.printOut(ris.reversingInsertSorting(setup.arr2)));
-//        System.out.println(printer.printOut(ris.reversingInsertSorting(setup.arr3)));
+        System.out.println(printer.printOut(ris.reversingInsertSorting(setup.arr1)));
+        System.out.println(printer.printOut(ris.reversingInsertSorting(setup.arr2)));
+        System.out.println(printer.printOut(ris.reversingInsertSorting(setup.arr3)));
 
-        System.out.println(printer.printOut((ArrayList<Integer>) ms.mergeSorting(setup.arr1)));
-        System.out.println(printer.printOut((ArrayList<Integer>) ms.mergeSorting(setup.arr2)));
-        System.out.println(printer.printOut((ArrayList<Integer>) ms.mergeSorting(setup.arr3)));
+//        System.out.println(printer.printOut((ArrayList<Integer>) ms.mergeSorting(setup.arr1)));
+//        System.out.println(printer.printOut((ArrayList<Integer>) ms.mergeSorting(setup.arr2)));
+//        System.out.println(printer.printOut((ArrayList<Integer>) ms.mergeSorting(setup.arr3)));
+
+//        System.out.println(printer.printOut(solution1.insertionSort(setup.arr1)));
+//        System.out.println(printer.printOut(solution1.insertionSort(setup.arr2)));
+//        System.out.println(printer.printOut(solution1.insertionSort(setup.arr3)));
     }
 }
 
